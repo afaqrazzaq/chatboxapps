@@ -4,13 +4,13 @@
 
 package handlers
 
-import (
+import (  // provides support for WebSocket connections
 	"fmt"
 	"net/http"
 
 	"github.com/gorilla/websocket"
 )
-var upgrader = websocket.Upgrader{
+var upgrader = websocket.Upgrader{    //used to upgrade a standard HTTP connection to a WebSocket connection.
 	ReadBufferSize:  1024,
 	WriteBufferSize: 1024,
 	CheckOrigin: func(r *http.Request) bool {
